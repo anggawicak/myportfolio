@@ -18,3 +18,10 @@ html {
 #contact {
   padding-top: 6rem;
 }
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
+}

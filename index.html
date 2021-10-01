@@ -13,6 +13,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -38,6 +41,9 @@
               <a class="nav-link" href="#projects">Project</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
@@ -50,7 +56,7 @@
     <section class="jumbotron text-center">
       <img src="img/foto.jpg" alt="Angga Wicaksono" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Angga Wicaksono</h1>
-      <p class="lead">Developer Web | Desain Grafis</p>
+      <p class="lead"></p>
       <svg xmlns="img/jumbotron.svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -70,11 +76,16 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque qui minus sapiente perspiciatis eaque omnis cupiditate harum rem voluptatem?</p>
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
+            <p>
+              Lulusan S1 Teknik Informatika dengan keahlian pengembangan web. Memiliki pengalaman dalam pembuatan website kependudukan. Mencari peluang kerja yang memberi kesempatan untuk berkembang
+            </p>
           </div>
-          <div class="col-md-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem id soluta quas libero iste rem aut officiis atque harum. Atque repudiandae quas quo voluptatem maiores?
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <p>
+              Pantang menyerah pada keadaan, dan selalu berjuang untuk mengubah kehidupan menjadi lebih baik disetiap kesempatan, membahagiakan keluarga dan mensejahterakannya merupakan tujuan saya.
+              Selalu berdoa agar diberikan kemudahan dalam menggapainya.
+            </p>
           </div>
         </div>
       </div>
@@ -98,26 +109,26 @@
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="img/1.png" class="card-img-top" alt="Projects 1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Log in Page</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/2.jpg" class="card-img-top" alt="Projects 1" />
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
+              <img src="img/2.png" class="card-img-top" alt="Projects 1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Graphic</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/3.jpg" class="card-img-top" alt="Projects 1" />
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
+              <img src="img/3.png" class="card-img-top" alt="Projects 1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">View Output</p>
               </div>
             </div>
           </div>
@@ -132,6 +143,38 @@
       </svg>
     </section>
     <!-- Akhir Projects -->
+
+    <!-- Galery -->
+    <section id="gallery">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <a href="#"> <img src="gallery/g1.jpg" alt="gambar1" class="img-fluid gallery-img" /></a>
+          </div>
+          <div class="col-md-3">
+            <a href="#"> <img src="gallery/g2.jpg" alt="gambar2" class="img-fluid gallery-img" /></a>
+          </div>
+          <div class="col-md-3">
+            <a href="#"> <img src="gallery/g3.jpg" alt="gambar3" class="img-fluid gallery-img" /></a>
+          </div>
+          <div class="col-md-3">
+            <a href="#"> <img src="gallery/g4.jpg" alt="gambar4" class="img-fluid gallery-img" /></a>
+          </div>
+          <div class="col-md-3">
+            <a href="#"> <img src="gallery/g5.jpg" alt="gambar5" class="img-fluid gallery-img" /></a>
+          </div>
+          <div class="col-md-3">
+            <a href="#"> <img src="gallery/g6.jpg" alt="gambar6" class="img-fluid gallery-img" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Galery -->
 
     <!-- Contact -->
     <section id="contact">
@@ -192,6 +235,31 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galleryImage = document.querySelectorAll(".gallery-img");
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 1.5, delay: 1.5, text: "Web Developer" });
+      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: "-50%", opacity: 0, delay: 0.5, ease: "back" });
+    </script>
 
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbzwx8ZXNKHbMlCh93TFwzCg7mTYZKWgTmpUbDba2o9TmB7x4CP0fddQAGHTmCZoOHJ5/exec";
